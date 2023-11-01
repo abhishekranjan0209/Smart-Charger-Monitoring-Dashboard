@@ -1,0 +1,261 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: CHG
+
+
+BO_ 781 VCU_Charger_Command_Info: 7 Vector__XXX
+ SG_ ETS_VCU_ChargerCtrlMode_St_enum : 55|2@0+ (1,0) [0|3] "enum"  CHG
+ SG_ ETS_VCU_ChargerCommCtrl_St_enum : 41|2@0+ (1,0) [0|3] "enum"  CHG
+ SG_ ETS_VCU_ChargerOpReq_Cmd_enum : 43|2@0+ (1,0) [0|3] "enum"  CHG
+ SG_ ETS_VCU_ChargerCurrSetpt_Ref_A : 27|16@0+ (0.005,0) [0|327.675] "A"  CHG
+ SG_ ETS_VCU_ChargerVoltSetpt_Ref_V : 11|16@0+ (0.005,0) [0|327.675] "V"  CHG
+ SG_ CTROLL_781 : 15|4@0+ (1,0) [0|15] ""  CHG
+ SG_ CKSUM1_781 : 7|8@0+ (1,0) [0|255] ""  CHG
+
+BO_ 782 VCU_Status: 8 Vector__XXX
+ SG_ ETS_VCU_AmbientTemp_Act_degC : 10|7@0+ (1,-40) [-40|87] "degC"  CHG
+
+BO_ 848 Charger_Status_Info: 7 CHG
+ SG_ EVC_CHG_Status_St_enum : 7|2@0+ (1,0) [0|3] "enum" Vector__XXX
+ SG_ EVC_CHG_CycleStatus_St_enum : 5|2@0+ (1,0) [0|3] "enum" Vector__XXX
+ SG_ EVC_CHG_OperatingMode_St_enum : 3|2@0+ (1,0) [0|3] "enum" Vector__XXX
+ SG_ EVC_CHG_ACInputSupplyStatus_St_B : 1|1@0+ (1,0) [0|1] "B" Vector__XXX
+ SG_ EVC_CHG_CktTemp_Act_degC : 0|8@0+ (1,-45) [-45|210] "degC" Vector__XXX
+ SG_ EVC_CHG_HousingTemp_Act_degC : 8|8@0+ (1,-45) [-45|210] "degC" Vector__XXX
+ SG_ EVC_CHG_ACRMSVoltage_Act_V : 16|9@0+ (1,0) [0|511] "V" Vector__XXX
+ SG_ EVC_CHG_Fan1DutyCycle_Act_perc : 39|7@0+ (1,0) [0|127] "perc" Vector__XXX
+ SG_ EVC_CHG_Fan2DutyCycle_Act_perc : 32|7@0+ (1,0) [0|127] "perc" Vector__XXX
+ SG_ EVC_CHG_ACRMScurrent_Act_A : 41|8@0+ (0.08,0) [0|20] "A" Vector__XXX
+
+BO_ 851 Charger_Status_Info1: 4 CHG
+ SG_ EVC_CHG_PSFBXmer_Act_degC : 7|8@0+ (1,-45) [-45|210] "degC" Vector__XXX
+ SG_ EVC_CHG_PSFBFets_Act_degC : 15|8@0+ (1,-45) [-45|210] "degC" Vector__XXX
+ SG_ EVC_CHG_OutputDiodes_Act_degC : 23|8@0+ (1,-45) [-45|210] "degC" Vector__XXX
+ SG_ EVC_CHG_PFCFets_Act_degC : 31|8@0+ (1,-45) [-45|210] "degC" Vector__XXX
+
+BO_ 862 Charger_Reserved1: 8 CHG
+
+BO_ 864 Charger_Reserved2: 8 CHG
+
+BO_ 849 Charger_FaultStatus_Info: 5 CHG
+ SG_ Reserved_849_36 : 39|4@0+ (1,0) [0|0] "" Vector__XXX
+ SG_ Reserved_849_14 : 15|2@0+ (1,0) [0|3] "" Vector__XXX
+ SG_ EVC_CHG_FaultStatus_St_B : 8|1@0+ (1,0) [0|1] "B" Vector__XXX
+ SG_ EVC_CHG_DeratingStatus_St_enum : 3|4@0+ (1,0) [0|15] "enum" Vector__XXX
+ SG_ EVC_CHG_TempSensorFault_St_B : 4|1@0+ (1,0) [0|1] "B" Vector__XXX
+ SG_ EVC_CHG_DCvoltSensorFault_St_B : 5|1@0+ (1,0) [0|1] "B" Vector__XXX
+ SG_ EVC_CHG_DCcurrSensorFault_St_B : 6|1@0+ (1,0) [0|1] "B" Vector__XXX
+ SG_ EVC_CHG_ACvoltSensorFault_St_B : 7|1@0+ (1,0) [0|1] "B" Vector__XXX
+ SG_ EVC_CHG_InternalFuseFault_St_B : 16|1@0+ (1,0) [0|1] "B" Vector__XXX
+ SG_ EVC_CHG_ACVoltageFault_St_enum : 13|3@0+ (1,0) [0|7] "enum" Vector__XXX
+ SG_ EVC_CHG_DCVoltageFault_St_enum : 23|3@0+ (1,0) [0|7] "enum" Vector__XXX
+ SG_ EVC_CHG_ACCurrentFault_St_enum : 10|2@0+ (1,0) [0|3] "enum" Vector__XXX
+ SG_ EVC_CHG_DCCurrentFault_St_enum : 34|3@0+ (1,0) [0|7] "enum" Vector__XXX
+ SG_ EVC_CHG_ChargerCRCViolation_St_B : 20|1@0+ (1,0) [0|1] "B" Vector__XXX
+ SG_ EVC_CHG_OutRevPolarityFault_St_B : 19|1@0+ (1,0) [0|1] "B" Vector__XXX
+ SG_ EVC_CHG_VCUCANcommTimeout_St_B : 18|1@0+ (1,0) [0|1] "B" Vector__XXX
+ SG_ EVC_CHG_SetPointViolation_St_B : 17|1@0+ (1,0) [0|1] "B" Vector__XXX
+ SG_ EVC_CHG_TempFault_St_B : 31|3@0+ (1,0) [0|7] "B" Vector__XXX
+ SG_ EVC_CHG_Fan1Fault_St_B : 28|2@0+ (1,0) [0|3] "B" Vector__XXX
+ SG_ EVC_CHG_Fan2Fault_St_B : 26|2@0+ (1,0) [0|3] "B" Vector__XXX
+ SG_ EVC_CHG_MOVFault_St_B : 24|1@0+ (1,0) [0|1] "B" Vector__XXX
+ SG_ EVC_CHG_ACcurrSensorFault_St_B : 35|1@0+ (1,0) [0|1] "B" Vector__XXX
+
+BO_ 850 Charger_Power_Info: 8 CHG
+ SG_ EVC_CHG_InputEnergyCount_Act_kWh : 39|14@0+ (0.002,0) [0|32.766] "kWh" Vector__XXX
+ SG_ EVC_CHG_MaxAvailablePower_Act_W : 41|12@0+ (1,0) [0|4095] "W" Vector__XXX
+ SG_ EVC_CHG_DCCurrent_Act_A : 23|16@0+ (0.005,-100) [-100|227.675] "A" Vector__XXX
+ SG_ EVC_CHG_DCVoltage_Act_V : 7|16@0+ (0.002,0) [0|131.07] "V" Vector__XXX
+
+BO_ 1536 BMS_Overview: 8 Vector__XXX
+ SG_ ESS_BMS_Voltage_Act_V : 22|13@0+ (0.01,0) [0|81.91] "V"  CHG
+ SG_ ESS_BMS_iPack_Act_A : 25|17@0+ (0.01,-655) [-655|655.71] "A"  CHG
+
+
+
+CM_ SG_ 781 ETS_VCU_ChargerCtrlMode_St_enum "Charger mode command by VCU";
+CM_ SG_ 781 ETS_VCU_ChargerCommCtrl_St_enum "Command to charger to disable or enable CAN communication";
+CM_ SG_ 781 ETS_VCU_ChargerOpReq_Cmd_enum "VCU request to intiate charge or stop";
+CM_ SG_ 781 ETS_VCU_ChargerCurrSetpt_Ref_A "Charger o/p current limit requested  by Vehicle";
+CM_ SG_ 781 ETS_VCU_ChargerVoltSetpt_Ref_V "Charger o/p voltage requested  by Vehicle";
+CM_ SG_ 782 ETS_VCU_AmbientTemp_Act_degC "Ambient temperature (at location)";
+CM_ SG_ 848 EVC_CHG_Status_St_enum "Charger Status";
+CM_ SG_ 848 EVC_CHG_CycleStatus_St_enum "Charge Cycle Status";
+CM_ SG_ 848 EVC_CHG_OperatingMode_St_enum "Charger operating mode status";
+CM_ SG_ 848 EVC_CHG_ACInputSupplyStatus_St_B "AC connection status";
+CM_ SG_ 848 EVC_CHG_CktTemp_Act_degC "PCB Temperature inside charger";
+CM_ SG_ 848 EVC_CHG_HousingTemp_Act_degC "Housing temperature inside charger";
+CM_ SG_ 848 EVC_CHG_ACRMSVoltage_Act_V "Input RMS voltage of charger";
+CM_ SG_ 848 EVC_CHG_Fan1DutyCycle_Act_perc "Duty cycle of Charger cooling fan 1";
+CM_ SG_ 848 EVC_CHG_Fan2DutyCycle_Act_perc "Duty cycle of Charger cooling fan 2";
+CM_ SG_ 848 EVC_CHG_ACRMScurrent_Act_A "Input RMS current of charger";
+CM_ SG_ 851 EVC_CHG_PSFBXmer_Act_degC "PSFB X'mer Temperature";
+CM_ SG_ 851 EVC_CHG_PSFBFets_Act_degC "PSFB Fets Temperature";
+CM_ SG_ 851 EVC_CHG_OutputDiodes_Act_degC "O/P Diodes Temperature";
+CM_ SG_ 851 EVC_CHG_PFCFets_Act_degC "PFC Fets Temperature";
+CM_ SG_ 849 EVC_CHG_FaultStatus_St_B "Fault Status of Charger";
+CM_ SG_ 849 EVC_CHG_DeratingStatus_St_enum "Reason for Charger derating";
+CM_ SG_ 849 EVC_CHG_TempSensorFault_St_B "Temperature sensor fault of charger";
+CM_ SG_ 849 EVC_CHG_DCvoltSensorFault_St_B "DC voltage sensor fault of charger";
+CM_ SG_ 849 EVC_CHG_DCcurrSensorFault_St_B "DC current sensor fault of charger";
+CM_ SG_ 849 EVC_CHG_ACvoltSensorFault_St_B "AC voltage sensor faulr of charger";
+CM_ SG_ 849 EVC_CHG_InternalFuseFault_St_B "Charger Internal fuse blown";
+CM_ SG_ 849 EVC_CHG_ACVoltageFault_St_enum "Charger raises fault when AC voltage is out of threshold limits";
+CM_ SG_ 849 EVC_CHG_DCVoltageFault_St_enum "Charger raises fault when DC voltage is out of threshold limits";
+CM_ SG_ 849 EVC_CHG_ACCurrentFault_St_enum "Charger raises fault when AC current is out of threshold limits";
+CM_ SG_ 849 EVC_CHG_DCCurrentFault_St_enum "Charger raises fault when DC voltage is out of threshold limits";
+CM_ SG_ 849 EVC_CHG_ChargerCRCViolation_St_B "Charger CRC violation fault";
+CM_ SG_ 849 EVC_CHG_OutRevPolarityFault_St_B "Charger raises fault when it detects charger DC terminals are connected in reverse polarity";
+CM_ SG_ 849 EVC_CHG_VCUCANcommTimeout_St_B "VCU CAN communication fault";
+CM_ SG_ 849 EVC_CHG_SetPointViolation_St_B "Charger raises fault when it is not able to deliver Current/voltage as per command received from VCU";
+CM_ SG_ 849 EVC_CHG_TempFault_St_B "Charger over / under temperature warning/error";
+CM_ SG_ 849 EVC_CHG_Fan1Fault_St_B "Charger cooling fan 1 fault";
+CM_ SG_ 849 EVC_CHG_Fan2Fault_St_B "Charger cooling fan 2 fault";
+CM_ SG_ 849 EVC_CHG_MOVFault_St_B "Charger MOV Fault";
+CM_ SG_ 849 EVC_CHG_ACcurrSensorFault_St_B "AC current sensor fault";
+CM_ SG_ 850 EVC_CHG_InputEnergyCount_Act_kWh "Input energy of charger during current charge cycle";
+CM_ SG_ 850 EVC_CHG_MaxAvailablePower_Act_W "Max available power for charging";
+CM_ SG_ 850 EVC_CHG_DCCurrent_Act_A "DC output current";
+CM_ SG_ 850 EVC_CHG_DCVoltage_Act_V "DC output voltage";
+CM_ SG_ 1536 ESS_BMS_Voltage_Act_V "Battery Voltage, this is mean of all modules' voltages from all packs connected in parallel (Signal Voltage in module overview)";
+CM_ SG_ 1536 ESS_BMS_iPack_Act_A "Measure current from the pack, this will be sum of measured current from all modules";
+BA_DEF_ BU_  "OBDResponseID" HEX 0 2047;
+BA_DEF_ BU_  "OBDRequestID" HEX 0 2047;
+BA_DEF_ BU_  "OBDEnabled" STRING ;
+BA_DEF_ BU_  "UDSResponseID" HEX 0 2047;
+BA_DEF_ BU_  "UDSRequestID" HEX 0 2047;
+BA_DEF_ BU_  "UDSEnabled" STRING ;
+BA_DEF_ BU_  "BalnetEnabled" STRING ;
+BA_DEF_ BU_  "BalnetBaseID" HEX 0 127;
+BA_DEF_ BU_  "CCPEnabled" STRING ;
+BA_DEF_ BU_  "CCPRequestID" HEX 0 2047;
+BA_DEF_ BU_  "CCPResponseID" HEX 0 2047;
+BA_DEF_ BU_  "CCPFastID" HEX 0 2047;
+BA_DEF_ BU_  "CCPMidID" HEX 0 2047;
+BA_DEF_ BU_  "CCPSlowID" HEX 0 2047;
+BA_DEF_ BU_  "NmStationAddress" HEX 0 4294967295;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 1000;
+BA_DEF_  "Baudrate_CAN1" INT 0 1000;
+BA_DEF_  "Baudrate_CAN2" INT 0 1000;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "Fixed Periodic","Event Periodic","Enabled Periodic","Event","BALNET","Custom Event";
+BA_DEF_ BO_  "CANChannel" ENUM  "CAN1","CAN2";
+BA_DEF_ BU_  "Comment" STRING ;
+BA_DEF_  "CANBus1" STRING ;
+BA_DEF_  "CANBus2" STRING ;
+BA_DEF_DEF_  "OBDResponseID" 0;
+BA_DEF_DEF_  "OBDRequestID" 0;
+BA_DEF_DEF_  "OBDEnabled" "NO";
+BA_DEF_DEF_  "UDSResponseID" 0;
+BA_DEF_DEF_  "UDSRequestID" 0;
+BA_DEF_DEF_  "UDSEnabled" "NO";
+BA_DEF_DEF_  "BalnetEnabled" "NO";
+BA_DEF_DEF_  "BalnetBaseID" 0;
+BA_DEF_DEF_  "CCPEnabled" "NO";
+BA_DEF_DEF_  "CCPRequestID" 0;
+BA_DEF_DEF_  "CCPResponseID" 0;
+BA_DEF_DEF_  "CCPFastID" 0;
+BA_DEF_DEF_  "CCPMidID" 0;
+BA_DEF_DEF_  "CCPSlowID" 0;
+BA_DEF_DEF_  "NmStationAddress" 0;
+BA_DEF_DEF_  "BusType" "";
+BA_DEF_DEF_  "GenMsgCycleTime" 1000;
+BA_DEF_DEF_  "Baudrate_CAN1" 500;
+BA_DEF_DEF_  "Baudrate_CAN2" 500;
+BA_DEF_DEF_  "GenMsgSendType" "Fixed Periodic";
+BA_DEF_DEF_  "CANChannel" "CAN1";
+BA_DEF_DEF_  "Comment" "-";
+BA_DEF_DEF_  "CANBus1" "NO";
+BA_DEF_DEF_  "CANBus2" "NO";
+BA_ "BusType" "CAN";
+BA_ "CANBus1" "YES";
+BA_ "OBDResponseID" BU_ CHG 0;
+BA_ "OBDRequestID" BU_ CHG 0;
+BA_ "OBDEnabled" BU_ CHG "NO";
+BA_ "UDSResponseID" BU_ CHG 2024;
+BA_ "UDSRequestID" BU_ CHG 2016;
+BA_ "UDSEnabled" BU_ CHG "YES";
+BA_ "BalnetEnabled" BU_ CHG "NO";
+BA_ "BalnetBaseID" BU_ CHG 0;
+BA_ "CCPEnabled" BU_ CHG "NO";
+BA_ "CCPRequestID" BU_ CHG 0;
+BA_ "CCPResponseID" BU_ CHG 0;
+BA_ "CCPFastID" BU_ CHG 0;
+BA_ "CCPMidID" BU_ CHG 0;
+BA_ "CCPSlowID" BU_ CHG 0;
+BA_ "GenMsgCycleTime" BO_ 781 100;
+BA_ "GenMsgCycleTime" BO_ 782 100;
+BA_ "GenMsgCycleTime" BO_ 848 100;
+BA_ "GenMsgCycleTime" BO_ 849 100;
+BA_ "GenMsgCycleTime" BO_ 850 100;
+BA_ "GenMsgCycleTime" BO_ 1536 10;
+VAL_ 781 ETS_VCU_ChargerCtrlMode_St_enum 0 "Init" 1 "CC Mode" 2 "CV Mode" 3 "Charge Complete" ;
+VAL_ 781 ETS_VCU_ChargerCommCtrl_St_enum 0 "Init" 1 "Enable Transmit CAN" 2 "Disable Transmit CAN" 3 "Reserved" ;
+VAL_ 781 ETS_VCU_ChargerOpReq_Cmd_enum 0 "Init" 1 "Enable" 2 "Disable" 3 "Shutdown" ;
+VAL_ 781 ETS_VCU_ChargerCurrSetpt_Ref_A 65535 "Reserved" 65534 "Reserved" 65533 "Reserved" 65532 "Reserved" 65531 "Reserved" 65530 "Reserved" 65529 "Reserved" 65528 "Reserved" 65527 "Reserved" 65526 "Reserved" ;
+VAL_ 781 ETS_VCU_ChargerVoltSetpt_Ref_V 65535 "Reserved" 65534 "Reserved" 65533 "Reserved" 65532 "Reserved" 65531 "Reserved" 65530 "Reserved" 65529 "Reserved" 65528 "Reserved" 65527 "Reserved" 65526 "Reserved" ;
+VAL_ 848 EVC_CHG_Status_St_enum 0 "Initializing" 1 "Ready Fresh CHG cycle " 2 "Error" 3 "Ready Resumed CHG cycle" ;
+VAL_ 848 EVC_CHG_CycleStatus_St_enum 0 "No active cycle" 1 "Charging" 2 "Charge Complete" 3 "Reserved" ;
+VAL_ 848 EVC_CHG_OperatingMode_St_enum 0 "Init" 1 "CC Mode" 2 "CV Mode" 3 "Standby" ;
+VAL_ 848 EVC_CHG_ACInputSupplyStatus_St_B 0 "No AC detected" 1 "AC Detected" ;
+VAL_ 848 EVC_CHG_CktTemp_Act_degC 255 "Reserved" 254 "Reserved" 253 "Reserved" 252 "Reserved" 251 "Reserved" 250 "Reserved" 249 "Reserved" 248 "Reserved" 247 "Reserved" 246 "Reserved" ;
+VAL_ 848 EVC_CHG_HousingTemp_Act_degC 255 "Reserved" 254 "Reserved" 253 "Reserved" 252 "Reserved" 251 "Reserved" 250 "Reserved" 249 "Reserved" 248 "Reserved" 247 "Reserved" 246 "Reserved" ;
+VAL_ 848 EVC_CHG_ACRMSVoltage_Act_V 511 "Reserved" 510 "Reserved" 509 "Reserved" 508 "Reserved" 507 "Reserved" ;
+VAL_ 849 EVC_CHG_FaultStatus_St_B 0 "No Fault" 1 "Fault" ;
+VAL_ 849 EVC_CHG_DeratingStatus_St_enum 0 "No derating" 1 "Over temperature" 2 "Under Temperature" 3 "Over AC Voltage" 4 "Under AC voltage" 5 "Fan Fault" 6 "Sensor Fault" 7 "Reserved" 8 "Reserved" 9 "Reserved" 10 "Reserved" 11 "Reserved" 12 "Reserved" 13 "Reserved" 14 "Reserved" 15 "Reserved" ;
+VAL_ 849 EVC_CHG_TempSensorFault_St_B 0 "No Fault" 1 "Fault" ;
+VAL_ 849 EVC_CHG_DCvoltSensorFault_St_B 0 "No Fault" 1 "Fault" ;
+VAL_ 849 EVC_CHG_DCcurrSensorFault_St_B 0 "No Fault" 1 "Fault" ;
+VAL_ 849 EVC_CHG_ACvoltSensorFault_St_B 0 "No Fault" 1 "Fault" ;
+VAL_ 849 EVC_CHG_InternalFuseFault_St_B 0 "No Fault" 1 "Fault" ;
+VAL_ 849 EVC_CHG_ACVoltageFault_St_enum 0 "No fault" 1 "Over Voltage Warning" 2 "Over Voltage Error" 3 "Over Voltage Fault" 4 "Under Voltage Warning" 5 "Under Voltage Error" 6 "Under Voltage Fault" 7 "Reserved" ;
+VAL_ 849 EVC_CHG_DCVoltageFault_St_enum 0 "No fault" 1 "Over Voltage Warning" 2 "Over Voltage Error" 3 "Over Voltage Fault" 4 "Under Voltage Warning" 5 "Under Voltage Error" 6 "Under Voltage Fault" 7 "Reserved" ;
+VAL_ 849 EVC_CHG_ACCurrentFault_St_enum 0 "No Fault" 1 "Over Current Warning" 2 "Over Current Error" 3 "Over Current Fault" ;
+VAL_ 849 EVC_CHG_DCCurrentFault_St_enum 0 "No Fault" 1 "Over Current Warning" 2 "Over Current Error" 3 "Over Current Fault" 4 "Under Current Fault" ;
+VAL_ 849 EVC_CHG_ChargerCRCViolation_St_B 0 "No Fault" 1 "Fault" ;
+VAL_ 849 EVC_CHG_OutRevPolarityFault_St_B 0 "No Fault" 1 "Fault" ;
+VAL_ 849 EVC_CHG_VCUCANcommTimeout_St_B 0 "No Fault" 1 "Fault" ;
+VAL_ 849 EVC_CHG_SetPointViolation_St_B 0 "No Fault" 1 "Fault" ;
+VAL_ 849 EVC_CHG_TempFault_St_B 0 "No Fault" 1 "Over temp warining" 2 "Over temp error" 3 "Under temp warining" 4 "Under temp error" ;
+VAL_ 849 EVC_CHG_Fan1Fault_St_B 0 "No Fault" 1 "Not applicable" 2 "Fault" 3 "Reserved" ;
+VAL_ 849 EVC_CHG_Fan2Fault_St_B 0 "No Fault" 1 "Not applicable" 2 "Fault" 3 "Reserved" ;
+VAL_ 849 EVC_CHG_MOVFault_St_B 0 "No Fault" 1 "Fault" ;
+VAL_ 849 EVC_CHG_ACcurrSensorFault_St_B 0 "No Fault" 1 "Fault" ;
+VAL_ 850 EVC_CHG_InputEnergyCount_Act_kWh 16383 "Reserved" 16382 "Reserved" 16381 "Reserved" 16380 "Reserved" 16379 "Reserved" 16378 "Reserved" 16377 "Reserved" 16376 "Reserved" 16375 "Reserved" 16374 "Reserved" ;
+VAL_ 850 EVC_CHG_MaxAvailablePower_Act_W 4095 "Reserved" 4094 "Reserved" 4093 "Reserved" 4092 "Reserved" 4091 "Reserved" 4090 "Reserved" 4089 "Reserved" 4088 "Reserved" 4087 "Reserved" 4086 "Reserved" ;
+VAL_ 850 EVC_CHG_DCCurrent_Act_A 65535 "Reserved" 65534 "Reserved" 65533 "Reserved" 65532 "Reserved" 65531 "Reserved" 65530 "Reserved" 65529 "Reserved" 65528 "Reserved" 65527 "Reserved" 65526 "Reserved" ;
+VAL_ 850 EVC_CHG_DCVoltage_Act_V 65535 "Reserved" 65534 "Reserved" 65533 "Reserved" 65532 "Reserved" 65531 "Reserved" 65530 "Reserved" 65529 "Reserved" 65528 "Reserved" 65527 "Reserved" 65526 "Reserved" ;
+

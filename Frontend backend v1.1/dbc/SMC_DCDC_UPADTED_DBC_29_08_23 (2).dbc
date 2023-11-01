@@ -1,0 +1,244 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: EVC INV BMU MET DCDC TST
+
+
+BO_ 3221225472 VECTOR__INDEPENDENT_SIG_MSG: 0 Vector__XXX
+ SG_ DCDC_FET_Tmp_Vld : 0|1@0+ (1,0) [0|1] "-" Vector__XXX
+ SG_ DCDC_In_Vlt_Vld : 0|1@0+ (1,0) [0|1] "-" Vector__XXX
+ SG_ DCDC_In_Cur_Vld : 0|1@0+ (1,0) [0|1] "-" Vector__XXX
+ SG_ ignore1c5 : 0|48@1+ (1,0) [0|0] "" Vector__XXX
+
+BO_ 453 MET_Display_Request_H1: 8 Vector__XXX
+ SG_ Vehicle_Speed : 7|16@0+ (0.0078125,0) [0|511.99] "km/h"  DCDC
+
+BO_ 1357 M54D_DCDC_Cnv_Inf_Dsgn_2: 8 DCDC
+ SG_ DCDC_Out_Curr_Rst_Val : 23|10@0+ (0.05,0) [0|25] "A" Vector__XXX
+ SG_ DCDC_FET_Tmp : 7|8@0+ (1,-40) [-40|150] "degC" Vector__XXX
+
+BO_ 1187 M4A3_DTC_Inf_DCDC: 4 DCDC
+ SG_ Odr_DTC : 31|8@0+ (1,0) [0|255] "-"  MET
+ SG_ Num_DTC : 23|8@0+ (1,0) [0|255] "-"  MET
+ SG_ DTC : 7|16@0+ (1,0) [0|65535] "-"  MET
+
+BO_ 433 M1B1_Gen_Ctrl_Req_H1: 2 EVC
+ SG_ Power_Supply_Flag : 6|1@0+ (1,0) [0|1] "" Vector__XXX
+ SG_ Pst_DTC_Mde : 5|1@0+ (1,0) [0|1] "-"  INV,BMU,MET,DCDC
+ SG_ Shtdwn_Odr : 7|1@0+ (1,0) [0|1] "-"  INV,DCDC
+ SG_ EVC_RC_1B1 : 9|2@0+ (1,0) [0|3] "-"  INV,DCDC
+
+BO_ 445 M1BD_DCDC_Cnv_Ctrl_Req_H1: 3 EVC
+ SG_ DCDC_ON_OFF_Req : 23|1@0+ (1,0) [0|1] "-"  DCDC
+ SG_ DCDC_Out_Vlt_Req_Val : 7|12@0+ (0.01,0) [0|20] "V"  DCDC
+
+BO_ 1808 M710_Phy_Add_TST_DCDC: 8 TST
+
+BO_ 473 M1D9_DCDC_Cnv_Inf_H1: 8 DCDC
+ SG_ DCDC_Out_Vlt_Vld : 46|1@0+ (1,0) [0|1] "-" Vector__XXX
+ SG_ DCDC_Out_Vlt : 31|12@0+ (0.01,0) [0|20] "V" Vector__XXX
+ SG_ DCDC_Out_Cur_Vld : 47|1@0+ (1,0) [0|1] "-" Vector__XXX
+ SG_ DCDC_Out_Cur : 15|10@0+ (0.05,0) [0|25] "A" Vector__XXX
+ SG_ DCDC_Err_Lv_Ntc : 3|2@0+ (1,0) [0|3] "-"  EVC
+ SG_ DCDC_Err_Ntc : 4|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ DCDC_Shtdwn_Prc_Cmp_flg : 5|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ DCDC_Strtup_Cmp_Flg : 7|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ DCDC_ON_OFF_Res : 6|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ DCDC_RC_1D9 : 57|2@0+ (1,0) [0|3] "-"  EVC
+
+BO_ 487 M1E7_DCDC_Cnv_Err_Inf: 8 DCDC
+ SG_ DCDC_dtct_EVC_RC_Err : 7|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ DCDC_dtct_Lst_Com_EVC : 6|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ DCDC_dtct_CAN_Bus_Off_Err : 5|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ DC_In_Ovr_Cur_Err : 4|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ DC_In_Ovr_Vlt_Err : 3|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ DC_Out_Ovr_Cur_Err : 1|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ DC_Out_Ovr_Vlt_Err : 0|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ DC_Out_Udr_Vlt_Err : 15|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ DCDC_FET_Ovr_Tmp_Err : 14|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ DC_In_Cur_Dtc_Cir_Err : 13|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ DC_In_Vlt_Dtc_Cir_Err : 12|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ DC_Out_Cur_Dtc_Cir_Err : 11|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ DC_Out_Vlt_Dtc_Cir_Err : 10|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ Tmp_Sns_Discnt_Err : 9|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ Tmp_Sns_Sht_Cir_Err : 8|1@0+ (1,0) [0|1] "-"  EVC
+ SG_ Tmp_Sns_Mfc_Err : 23|1@0+ (1,0) [0|1] "-"  EVC
+
+BO_ 1356 M54C_DCDC_Cnv_Inf_Dsgn_1: 8 DCDC
+ SG_ DCDC_In_Vlt : 35|12@0+ (0.1,0) [0|200] "V" Vector__XXX
+ SG_ DCDC_In_Cur : 23|10@0+ (0.05,0) [0|25] "A" Vector__XXX
+ SG_ DCDC_Sft_Ver : 7|16@0+ (1,0) [0|65535] "-" Vector__XXX
+
+BO_ 1248 M4E0_Dis_Com_Req_EVC: 8 EVC
+ SG_ DNC : 63|4@0+ (1,0) [0|15] "-"  INV,BMU,MET,DCDC
+ SG_ DCD : 59|4@0+ (1,0) [0|15] "-"  INV,BMU,MET,DCDC
+
+BO_ 1249 M4E1_Dis_Com_Req_INV: 8 INV
+ SG_ DNC : 63|4@0+ (1,0) [0|15] "-"  EVC,BMU,MET,DCDC
+ SG_ DCD : 59|4@0+ (1,0) [0|15] "-"  EVC,BMU,MET,DCDC
+
+BO_ 1250 M4E2_Dis_Com_Req_BMU: 8 BMU
+ SG_ DNC : 63|4@0+ (1,0) [0|15] "-"  EVC,INV,MET,DCDC
+ SG_ DCD : 59|4@0+ (1,0) [0|15] "-"  EVC,INV,MET,DCDC
+
+BO_ 1252 M4E4_Dis_Com_Req_MET: 8 MET
+ SG_ DNC : 63|4@0+ (1,0) [0|15] "-"  EVC,INV,BMU,DCDC
+ SG_ DCD : 59|4@0+ (1,0) [0|15] "-"  EVC,INV,BMU,DCDC
+
+BO_ 1251 M4E3_Dis_Com_Req_DCDC: 8 DCDC
+ SG_ DNC : 63|4@0+ (1,0) [0|15] "-"  EVC,INV,BMU,MET
+ SG_ DCD : 59|4@0+ (1,0) [0|15] "-"  EVC,INV,BMU,MET
+
+BO_ 1824 M720_Phy_Add_DCDC_TST: 8 DCDC
+
+
+
+CM_ BU_ EVC "Electric Vehicle Controller";
+CM_ BU_ INV "Inverter";
+CM_ BU_ BMU "Battery Management Unit";
+CM_ BU_ MET "Meter";
+CM_ BU_ DCDC "DCDC Converter";
+CM_ BU_ TST "Tester";
+CM_ BO_ 3221225472 "This is a message for not used signals, created by Vector CANdb++ DBC OLE DB Provider.";
+CM_ SG_ 3221225472 DCDC_FET_Tmp_Vld "DCDC High Side FET Temperature Validity [DCDC 温度Validity]";
+CM_ SG_ 3221225472 DCDC_In_Vlt_Vld "DCDC Input Voltage Validity [DCDC入力電圧Validity]";
+CM_ SG_ 3221225472 DCDC_In_Cur_Vld "DCDC Input Current Validity [DCDC入力電流Validity]";
+CM_ BO_ 1357 "DCDC Converter information for Designers 2
+Message for Designers";
+CM_ SG_ 1357 DCDC_Out_Curr_Rst_Val "DCDC Output Power Restriction Value [DCDC出力電力制限値]";
+CM_ SG_ 1357 DCDC_FET_Tmp "DCDC FET Temperature [DCDC FET温度]";
+CM_ BO_ 1187 "DTC Information for INV";
+CM_ SG_ 1187 Odr_DTC "Order of DTC [DTC順番情報]";
+CM_ SG_ 1187 Num_DTC "Number of DTC [DTC総数情報]";
+CM_ SG_ 1187 DTC "DTC  [DTC]";
+CM_ BO_ 433 "General Control Request H1";
+CM_ SG_ 433 Pst_DTC_Mde "Past DTC Mode  [過去DTCモード]";
+CM_ SG_ 433 Shtdwn_Odr "Shutdown Order [シャットダウン指示]";
+CM_ SG_ 433 EVC_RC_1B1 "EVC Rolling Count for 000 [EVCローリングカウント for 000]";
+CM_ BO_ 445 "DCDC Converter Control Request H1";
+CM_ SG_ 445 DCDC_ON_OFF_Req "DCDC ON/OFF Request [DCDCオンオフ要求]";
+CM_ SG_ 445 DCDC_Out_Vlt_Req_Val "DCDC Output Voltage Request Value [DCDC出力電圧要求値]";
+CM_ BO_ 1808 "Physical Address Tester to DCDC";
+CM_ BO_ 473 "DCDC Converter Information H1";
+CM_ SG_ 473 DCDC_Out_Vlt_Vld "DCDC Output Voltage Validity [DCDC出力電圧Validity]";
+CM_ SG_ 473 DCDC_Out_Vlt "DCDC Output Voltage [DCDC出力電圧]";
+CM_ SG_ 473 DCDC_Out_Cur_Vld "DCDC Output Current Validity [DCDC出力電流Validity]";
+CM_ SG_ 473 DCDC_Out_Cur "DCDC Output Current [DCDC出力電流]";
+CM_ SG_ 473 DCDC_Err_Lv_Ntc "DCDC Error Level Notice [DCDCエラーレベル通知]";
+CM_ SG_ 473 DCDC_Err_Ntc "DCDC Error Notice [DCDC故障通知]";
+CM_ SG_ 473 DCDC_Shtdwn_Prc_Cmp_flg "DCDC Shutdown Process Completion Flag [DCDC終了処理完了フラグ]";
+CM_ SG_ 473 DCDC_Strtup_Cmp_Flg "DCDC Startup Completion Flag [DCDC起動完了フラグ]";
+CM_ SG_ 473 DCDC_ON_OFF_Res "DCDC ON/OFF Response[DCDCオンオフ応答]";
+CM_ SG_ 473 DCDC_RC_1D9 "DCDC Rolling Count for 400 [DCDCローリングカウント for 400]";
+CM_ BO_ 487 "DCDC Converter Error Information";
+CM_ SG_ 487 DCDC_dtct_EVC_RC_Err "DCDC detected EVC Rolling Count Error [EVCローリングカウンタ異常]";
+CM_ SG_ 487 DCDC_dtct_Lst_Com_EVC "DCDC detected Lost Communication with EVC [CAN受信異常]";
+CM_ SG_ 487 DCDC_dtct_CAN_Bus_Off_Err "DCDC detected CAN Bus Off Error [CANバスオフ]";
+CM_ SG_ 487 DC_In_Ovr_Cur_Err "DC Input Over Current Error [DC入力過電流]";
+CM_ SG_ 487 DC_In_Ovr_Vlt_Err "DC Input Over Voltage Error [DC入力過電圧]";
+CM_ SG_ 487 DC_Out_Ovr_Cur_Err "DC Output Over Current Error [DC出力過電流]";
+CM_ SG_ 487 DC_Out_Ovr_Vlt_Err "DC Output Over Voltage Error [DC出力過電圧]";
+CM_ SG_ 487 DC_Out_Udr_Vlt_Err "DC Output Under Voltage Error [DC出力低電圧]";
+CM_ SG_ 487 DCDC_FET_Ovr_Tmp_Err "DCDC FET Over Temperature Error [DCDC FET高温異常]";
+CM_ SG_ 487 DC_In_Cur_Dtc_Cir_Err "DC Input Current Detection Circuit Error [DC入力電流検出回路エラー]";
+CM_ SG_ 487 DC_In_Vlt_Dtc_Cir_Err "DC Input Voltage Detection Circuit Error [DC入力電圧検出回路エラー]";
+CM_ SG_ 487 DC_Out_Cur_Dtc_Cir_Err "DC Output Current Detection Circuit Error [DC出力電流検出回路エラー]";
+CM_ SG_ 487 DC_Out_Vlt_Dtc_Cir_Err "DC Output Voltage Detection Circuit Error [DC出力電圧検出回路エラー]";
+CM_ SG_ 487 Tmp_Sns_Discnt_Err "Temperature Sensor Disconnection Error [温度センサ断線エラー]";
+CM_ SG_ 487 Tmp_Sns_Sht_Cir_Err "Temperature Sensor Short Circuit Error [温度センサ短絡エラー]";
+CM_ SG_ 487 Tmp_Sns_Mfc_Err "Temperature Sensor Malfunction Error [温度センサ故障エラー]";
+CM_ BO_ 1356 "DCDC Converter information for Designers 1
+Message for Designers";
+CM_ SG_ 1356 DCDC_In_Vlt "DCDC Input Voltage [DCDC入力電圧]";
+CM_ SG_ 1356 DCDC_In_Cur "DCDC Input Current [DCDC入力電流]";
+CM_ SG_ 1356 DCDC_Sft_Ver "DCDC Software Version [DCDCソフトウェアバージョン]";
+CM_ BO_ 1248 "Disable Communication Request EVC";
+CM_ SG_ 1248 DNC "Disable Normal Communication";
+CM_ SG_ 1248 DCD "Disable Communication Diagnosis";
+CM_ BO_ 1249 "Disable Communication Request INV";
+CM_ SG_ 1249 DNC "Disable Normal Communication";
+CM_ SG_ 1249 DCD "Disable Communication Diagnosis";
+CM_ BO_ 1250 "Disable Communication Request BMU";
+CM_ SG_ 1250 DNC "Disable Normal Communication";
+CM_ SG_ 1250 DCD "Disable Communication Diagnosis";
+CM_ BO_ 1252 "Disable Communication Request MET";
+CM_ SG_ 1252 DNC "Disable Normal Communication";
+CM_ SG_ 1252 DCD "Disable Communication Diagnosis";
+CM_ BO_ 1251 "Disable Communication Request DCDC";
+CM_ SG_ 1251 DNC "Disable Normal Communication";
+CM_ SG_ 1251 DCD "Disable Communication Diagnosis";
+CM_ BO_ 1824 "Physical Address DCDC to Tester";
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 3221225472 DCDC_FET_Tmp_Vld 0 "Valid" 1 "Invalid" ;
+VAL_ 3221225472 DCDC_In_Vlt_Vld 0 "Valid" 1 "Invalid" ;
+VAL_ 3221225472 DCDC_In_Cur_Vld 0 "Valid" 1 "Invalid" ;
+VAL_ 433 Pst_DTC_Mde 1 "Past Failure" 0 "Present Failure" ;
+VAL_ 433 Shtdwn_Odr 0 "No order" 1 "Order" ;
+VAL_ 445 DCDC_ON_OFF_Req 0 "Off" 1 "On" ;
+VAL_ 473 DCDC_Out_Vlt_Vld 0 "Valid" 1 "Invalid" ;
+VAL_ 473 DCDC_Out_Cur_Vld 0 "Valid" 1 "Invalid" ;
+VAL_ 473 DCDC_Err_Lv_Ntc 3 "Forced termination" 2 "Abnormality" 0 "No error" 1 "Protection" ;
+VAL_ 473 DCDC_Err_Ntc 0 "No notice" 1 "Notice" ;
+VAL_ 473 DCDC_Shtdwn_Prc_Cmp_flg 0 "Non-completion" 1 "Completion" ;
+VAL_ 473 DCDC_Strtup_Cmp_Flg 0 "Non-completion" 1 "Completion" ;
+VAL_ 473 DCDC_ON_OFF_Res 0 "Off" 1 "On" ;
+VAL_ 487 DCDC_dtct_EVC_RC_Err 0 "No error" 1 "Error" ;
+VAL_ 487 DCDC_dtct_Lst_Com_EVC 0 "No error" 1 "Error" ;
+VAL_ 487 DCDC_dtct_CAN_Bus_Off_Err 0 "No error" 1 "Error" ;
+VAL_ 487 DC_In_Ovr_Cur_Err 0 "No error" 1 "Error" ;
+VAL_ 487 DC_In_Ovr_Vlt_Err 0 "No error" 1 "Error" ;
+VAL_ 487 DC_Out_Ovr_Cur_Err 0 "No error" 1 "Error" ;
+VAL_ 487 DC_Out_Ovr_Vlt_Err 0 "No error" 1 "Error" ;
+VAL_ 487 DC_Out_Udr_Vlt_Err 0 "No error" 1 "Error" ;
+VAL_ 487 DCDC_FET_Ovr_Tmp_Err 0 "No error" 1 "Error" ;
+VAL_ 487 DC_In_Cur_Dtc_Cir_Err 0 "No error" 1 "Error" ;
+VAL_ 487 DC_In_Vlt_Dtc_Cir_Err 0 "No error" 1 "Error" ;
+VAL_ 487 DC_Out_Cur_Dtc_Cir_Err 0 "No error" 1 "Error" ;
+VAL_ 487 DC_Out_Vlt_Dtc_Cir_Err 0 "No error" 1 "Error" ;
+VAL_ 487 Tmp_Sns_Discnt_Err 0 "No error" 1 "Error" ;
+VAL_ 487 Tmp_Sns_Sht_Cir_Err 0 "No error" 1 "Error" ;
+VAL_ 487 Tmp_Sns_Mfc_Err 0 "No error" 1 "Error" ;
+VAL_ 1248 DNC 0 "Normal" 1 "Normal" 2 "Normal" 3 "Normal" 4 "Normal" 5 "Pre-step" 6 "Normal" 7 "Normal" 8 "Normal" 9 "Normal" 10 "Disable" 11 "Normal" 12 "Normal" 13 "Normal" 14 "Normal" 15 "Normal" ;
+VAL_ 1248 DCD 0 "Normal" 1 "Normal" 2 "Normal" 3 "Normal" 4 "Normal" 5 "Pre-step" 6 "Normal" 7 "Normal" 8 "Normal" 9 "Normal" 10 "Disable" 11 "Normal" 12 "Normal" 13 "Normal" 14 "Normal" 15 "Normal" ;
+VAL_ 1249 DNC 0 "Normal" 1 "Normal" 2 "Normal" 3 "Normal" 4 "Normal" 5 "Pre-step" 6 "Normal" 7 "Normal" 8 "Normal" 9 "Normal" 10 "Disable" 11 "Normal" 12 "Normal" 13 "Normal" 14 "Normal" 15 "Normal" ;
+VAL_ 1249 DCD 0 "Normal" 1 "Normal" 2 "Normal" 3 "Normal" 4 "Normal" 5 "Pre-step" 6 "Normal" 7 "Normal" 8 "Normal" 9 "Normal" 10 "Disable" 11 "Normal" 12 "Normal" 13 "Normal" 14 "Normal" 15 "Normal" ;
+VAL_ 1250 DNC 0 "Normal" 1 "Normal" 2 "Normal" 3 "Normal" 4 "Normal" 5 "Pre-step" 6 "Normal" 7 "Normal" 8 "Normal" 9 "Normal" 10 "Disable" 11 "Normal" 12 "Normal" 13 "Normal" 14 "Normal" 15 "Normal" ;
+VAL_ 1250 DCD 0 "Normal" 1 "Normal" 2 "Normal" 3 "Normal" 4 "Normal" 5 "Pre-step" 6 "Normal" 7 "Normal" 8 "Normal" 9 "Normal" 10 "Disable" 11 "Normal" 12 "Normal" 13 "Normal" 14 "Normal" 15 "Normal" ;
+VAL_ 1252 DNC 0 "Normal" 1 "Normal" 2 "Normal" 3 "Normal" 4 "Normal" 5 "Pre-step" 6 "Normal" 7 "Normal" 8 "Normal" 9 "Normal" 10 "Disable" 11 "Normal" 12 "Normal" 13 "Normal" 14 "Normal" 15 "Normal" ;
+VAL_ 1252 DCD 0 "Normal" 1 "Normal" 2 "Normal" 3 "Normal" 4 "Normal" 5 "Pre-step" 6 "Normal" 7 "Normal" 8 "Normal" 9 "Normal" 10 "Disable" 11 "Normal" 12 "Normal" 13 "Normal" 14 "Normal" 15 "Normal" ;
+VAL_ 1251 DNC 0 "Normal" 1 "Normal" 2 "Normal" 3 "Normal" 4 "Normal" 5 "Pre-step" 6 "Normal" 7 "Normal" 8 "Normal" 9 "Normal" 10 "Disable" 11 "Normal" 12 "Normal" 13 "Normal" 14 "Normal" 15 "Normal" ;
+VAL_ 1251 DCD 0 "Normal" 1 "Normal" 2 "Normal" 3 "Normal" 4 "Normal" 5 "Pre-step" 6 "Normal" 7 "Normal" 8 "Normal" 9 "Normal" 10 "Disable" 11 "Normal" 12 "Normal" 13 "Normal" 14 "Normal" 15 "Normal" ;
+

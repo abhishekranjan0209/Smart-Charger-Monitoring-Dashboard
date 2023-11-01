@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+<title>Car Dashboard</title>
+</head>
+<body>
+  <div>
+    <h3 style="color:white;">Status :<div style ="color:#90EE90;" > Connected to {{ status }}</div></h3>
+  </div>
+  <div>
+    <h3 style="color:white;">Project :<div style = "color: #90EE90;"> {{project_status}} </div></h3>
+  </div>  
+  <header class="header">
+    <div class="logo-left">
+      <img src="\static\css\logo.png" alt="Car Dashboard Logo" class="logo">
+      <h1 class="header-title"></h1>
+    </div>
+    <div class="logo-right">
+      <a href="https://www.unominda.com/" target="_blank">
+        <img src="\static\css\unominda.png" alt="Uno Minda Logo" class="unominda-logo">
+      </a>  
+    </div>
+  </header>
+  <div class="dashboard">
+    <div class="block speed">
+      <h3><span id="EVC_CHG_ACRMSVoltage_Act_V"></span></h3>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        function updateValue() {
+            $.get('/data', function(data) {
+                $('#EVC_CHG_ACRMSVoltage_Act_V').text(data.EVC_CHG_ACRMSVoltage_Act_V);
+            });
+        }
+        setInterval(updateValue,1000);
+        updateValue();
+    </script>
+    <div>EVC_CHG_ACRMSVoltage_Act_V</div>
+    </div>
+  <script src="\index.js"></script>
+  <div class="block distance">
+    <div class="value">350 km</div>
+      <div class="label">Distance</div>
+    </div>
+    <div class="block avg-speed">
+      <div class="value">80 km/h</div>
+      <div class="label">Avg Speed</div>
+    </div>
+  </div>
+  <div class="temperature-section">
+    <div class="temperature-meter">
+      <div class="temperature inside">
+        <div class="inner-circle">
+      <h4><span id="EVC_CHG_CktTemp_Act_degC"></span></h4>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script>
+        function updateValue() {
+            $.get('/data', function(data) {
+                $('#EVC_CHG_CktTemp_Act_degC').text(data.EVC_CHG_CktTemp_Act_degC);
+            });
+        }
+        setInterval(updateValue,1000);
+        updateValue();
+    </script>
+        </div>
+      </div>
+      <div class="label">EVC_CHG_CktTemp_Act_degC</div>
+    </div>
+    <div class="temperature-meter">
+      <div class="temperature outside">
+        <div class="inner-circle">
+          <span class="temp-value">18°C</span>
+        </div>
+      </div>
+      <div class="label">Outside Temperature</div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>Vroom "A one stop place for all the car related analysis </p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a>Home</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <ul>
+          <li><a>Terms &amp; Conditions</a></li>
+          <li><a>Privacy Policy</a></li>
+          <li><a>Disclaimer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Vroom. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
